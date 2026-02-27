@@ -1,63 +1,63 @@
-# Library Project - مشروع مكتبة بيع الكتب أونلاين 📚
+# Library Project 📚
 
-هذا المشروع عبارة عن تطبيق ويب لمكتبة إلكترونية لبيع الكتب، تم إنشاؤه باستخدام إطار العمل القوي **Django** في الواجهة الخلفية (Backend)، بالإضافة إلى **HTML, CSS, JavaScript** لتصميم الواجهة الأمامية (Frontend).
+This project is an online bookstore web application, built using the powerful **Django** framework for the backend, and **HTML, CSS, JavaScript** for the frontend design.
 
-## المميزات الأساسية ✨
-- عرض قائمة الكتب المتاحة ومقسمة إلى تصنيفات (Categories).
-- إمكانية إضافة، تعديل، وحذف الكتب من لوحة التحكم.
-- نظام لوحة تحكم (Admin Panel) متكامل لإدارة الموقع بكل سهولة.
-- إمكانية رفع صور لأغلفة الكتب ولأصحاب الحسابات.
-- نظام تسجيل الدخول وإنشاء الحسابات (إمكانية استعارة أو شراء الكتب حسب الإعدادات).
+## Key Features ✨
+- Display a list of available books categorized into groups (Categories).
+- Add, edit, and delete books from the admin panel.
+- A fully integrated Admin Panel to manage the website easily.
+- Upload images for book covers and user profile pictures.
+- User authentication system (users can borrow or purchase books depending on the settings).
 
-## المتطلبات الأساسية (Prerequisites) 🛠️
-قبل تشغيل المشروع، يجب التأكد من توفر البرامج التالية على جهازك:
-- **Python** (يُفضل الإصدار 3.10 أو أحدث).
-- **pip** (مدير الحزم الخاص ببايثون).
-- بيئة عمل افتراضية (Virtual Environment) باستخدام إما `venv` أو `conda`.
+## Prerequisites 🛠️
+Before running the project, make sure you have the following installed on your machine:
+- **Python** (version 3.10 or newer is recommended).
+- **pip** (Python package installer).
+- A virtual environment setup using either `venv` or `conda`.
 
-## خطوات التشغيل وإعداد بيئة العمل 🚀
+## Setup and Running the Project 🚀
 
-### 1. إعداد البيئة الوهمية (Virtual Environment)
-يُفضل دائماً عزل مكتبات المشروع باستخدام بيئة وهمية. إذا كنت تستخدم `conda` (كما هو الحال في هذا المشروع)، قم بكتابة:
+### 1. Set up the Virtual Environment
+It is always recommended to isolate project dependencies using a virtual environment. If you are using `conda` (which is highly recommended for this project), run:
 ```bash
 conda create --name libraryenv python=3.10
 conda activate libraryenv
 ```
-أو إذا كنت تستخدم `venv` العادي:
+Or if you are using the standard `venv`:
 ```bash
 python -m venv venv
-venv\Scripts\activate   # لنظام الويندوز
+venv\Scripts\activate   # For Windows
 ```
 
-### 2. تثبيت المكتبات والمتطلبات (Requirements)
-يحتوي المشروع على ملف `requirements.txt` والذي يضم المكتبات الأساسية (مثل Django و Pillow للصور). لتثبيتها بكتابة الأمر التالي:
+### 2. Install Requirements
+The project includes a `requirements.txt` file containing the essential libraries (like Django and Pillow for image processing). Install them by running:
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. تجهيز قاعدة البيانات (Migrations)
-يقوم المشروع باستخدام قاعدة بيانات `db.sqlite3` بشكل افتراضي ومحلي. لإنشاء وتهيئة الجداول الخاصة بالمشروع (مثل جداول المستخدمين والكتب):
+### 3. Setup the Database (Migrations)
+The project uses the default `db.sqlite3` database for local development. To create and initialize the necessary tables (such as users and books):
 ```bash
 python manage.py migrate
 ```
 
-### 4. إنشاء مدير النظام (Superuser)
-لإنشاء حساب أدمن للتحكم بالموقع (لإضافة الكتب والتصنيفات):
+### 4. Create a Superuser
+To create an admin account to manage the site (add books and categories):
 ```bash
 python manage.py createsuperuser
 ```
-سيُطلب منك إدخال (اسم المستخدم، البريد الإلكتروني، وكلمة المرور).
+You will be prompted to enter a username, email address, and password.
 
-### 5. تشغيل السيرفر المحلي (Run Server)
-الآن بعد أن أصبح كل شيء جاهزاً، يمكنك تشغيل المشروع عبر الأمر:
+### 5. Run the Local Server
+Now that everything is set up, you can run the project using the following command:
 ```bash
 python manage.py runserver
 ```
 
-## روابط هامة 🌐
-بعد تشغيل السيرفر، يمكنك زيارة الروابط التالية في المتصفح:
-- **واجهة الموقع الرئيسية:** `http://127.0.0.1:8000/`
-- **لوحة التحكم (Admin Panel):** `http://127.0.0.1:8000/admin/`
+## Important Links 🌐
+After starting the server, you can visit the following links in your browser:
+- **Main Website:** `http://127.0.0.1:8000/`
+- **Admin Panel:** `http://127.0.0.1:8000/admin/`
 
 ---
-*تم تصميم وتطوير هذا المشروع بواسطة Qusay*
+*Designed and developed by Qusay*
